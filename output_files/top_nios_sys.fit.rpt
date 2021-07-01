@@ -1,5 +1,5 @@
 Fitter report for top_nios_sys
-Thu Jul 01 09:04:00 2021
+Thu Jul 01 09:41:02 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu Jul 01 09:04:00 2021       ;
+; Fitter Status                      ; Successful - Thu Jul 01 09:41:02 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; top_nios_sys                                ;
 ; Top-level Entity Name              ; top_nios_sys                                ;
@@ -159,7 +159,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   6.0%      ;
+;     Processor 2            ;   5.8%      ;
 +----------------------------+-------------+
 
 
@@ -1740,9 +1740,9 @@ Warning (292000): FLEXlm software error: Invalid (inconsistent) license key.  Th
 Warning (292000): FLEXlm software error: Invalid (inconsistent) license key.  The license key and data for the feature do not match.  This usually happens when a license file has been altered. Feature:       quartus_seu_mitigation License path:  C:\Quatus16_lisense\license.dat; FlexNet Licensing error:-8,523 For further information, refer to the FlexNet Licensing documentation, available at "www.flexerasoftware.com"..
 Info (144001): Generated suppressed messages file C:/JBL/Altera_Nios/output_files/top_nios_sys.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 5256 megabytes
-    Info: Processing ended: Thu Jul 01 09:04:01 2021
-    Info: Elapsed time: 00:00:12
+    Info: Peak virtual memory: 5249 megabytes
+    Info: Processing ended: Thu Jul 01 09:41:03 2021
+    Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:14
 
 

@@ -1,5 +1,4 @@
 *.v~
 *.un~
-db/
-incremental_db/
+*.qsf~
 
