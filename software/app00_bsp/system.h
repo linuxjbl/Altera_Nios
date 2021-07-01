@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_qsys_0' in SOPC Builder design 'nios2e'
  * SOPC Builder design path: ../../nios2e.sopcinfo
  *
- * Generated: Thu Jul 01 05:31:35 KST 2021
+ * Generated: Thu Jul 01 09:11:07 KST 2021
  */
 
 /*
@@ -68,7 +68,7 @@
 #define ALT_CPU_CPU_ID_SIZE 1
 #define ALT_CPU_CPU_ID_VALUE 0x00000000
 #define ALT_CPU_CPU_IMPLEMENTATION "tiny"
-#define ALT_CPU_DATA_ADDR_WIDTH 0x12
+#define ALT_CPU_DATA_ADDR_WIDTH 0x13
 #define ALT_CPU_DCACHE_LINE_SIZE 0
 #define ALT_CPU_DCACHE_LINE_SIZE_LOG2 0
 #define ALT_CPU_DCACHE_SIZE 0
@@ -105,7 +105,7 @@
 #define NIOS2_CPU_ID_SIZE 1
 #define NIOS2_CPU_ID_VALUE 0x00000000
 #define NIOS2_CPU_IMPLEMENTATION "tiny"
-#define NIOS2_DATA_ADDR_WIDTH 0x12
+#define NIOS2_DATA_ADDR_WIDTH 0x13
 #define NIOS2_DCACHE_LINE_SIZE 0
 #define NIOS2_DCACHE_LINE_SIZE_LOG2 0
 #define NIOS2_DCACHE_SIZE 0
@@ -166,6 +166,33 @@
 
 
 /*
+ * HEX0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_HEX0 altera_avalon_pio
+#define HEX0_BASE 0x40000
+#define HEX0_BIT_CLEARING_EDGE_REGISTER 0
+#define HEX0_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HEX0_CAPTURE 0
+#define HEX0_DATA_WIDTH 8
+#define HEX0_DO_TEST_BENCH_WIRING 0
+#define HEX0_DRIVEN_SIM_VALUE 0
+#define HEX0_EDGE_TYPE "NONE"
+#define HEX0_FREQ 50000000
+#define HEX0_HAS_IN 0
+#define HEX0_HAS_OUT 1
+#define HEX0_HAS_TRI 0
+#define HEX0_IRQ -1
+#define HEX0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define HEX0_IRQ_TYPE "NONE"
+#define HEX0_NAME "/dev/HEX0"
+#define HEX0_RESET_VALUE 0
+#define HEX0_SPAN 16
+#define HEX0_TYPE "altera_avalon_pio"
+
+
+/*
  * PERIOD0 configuration
  *
  */
@@ -190,6 +217,33 @@
 #define PERIOD0_RESET_VALUE 0
 #define PERIOD0_SPAN 16
 #define PERIOD0_TYPE "altera_avalon_pio"
+
+
+/*
+ * PUSH configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_PUSH altera_avalon_pio
+#define PUSH_BASE 0x50000
+#define PUSH_BIT_CLEARING_EDGE_REGISTER 0
+#define PUSH_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define PUSH_CAPTURE 0
+#define PUSH_DATA_WIDTH 2
+#define PUSH_DO_TEST_BENCH_WIRING 0
+#define PUSH_DRIVEN_SIM_VALUE 0
+#define PUSH_EDGE_TYPE "NONE"
+#define PUSH_FREQ 50000000
+#define PUSH_HAS_IN 1
+#define PUSH_HAS_OUT 0
+#define PUSH_HAS_TRI 0
+#define PUSH_IRQ -1
+#define PUSH_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define PUSH_IRQ_TYPE "NONE"
+#define PUSH_NAME "/dev/PUSH"
+#define PUSH_RESET_VALUE 0
+#define PUSH_SPAN 16
+#define PUSH_TYPE "altera_avalon_pio"
 
 
 /*

@@ -96,7 +96,7 @@ module nios2e_nios2_qsys_0_cpu_test_bench (
   input            W_estatus_reg;
   input   [ 31: 0] W_ienable_reg;
   input   [ 31: 0] W_ipending_reg;
-  input   [ 17: 0] W_mem_baddr;
+  input   [ 18: 0] W_mem_baddr;
   input            W_rf_ecc_unrecoverable_valid;
   input            W_rf_ecc_valid_any;
   input   [ 31: 0] W_rf_wr_data;
@@ -106,7 +106,7 @@ module nios2e_nios2_qsys_0_cpu_test_bench (
   input   [ 31: 0] W_wr_data;
   input   [ 31: 0] av_ld_data_aligned_unfiltered;
   input            clk;
-  input   [ 17: 0] d_address;
+  input   [ 18: 0] d_address;
   input   [  3: 0] d_byteenable;
   input            d_read;
   input            d_write;

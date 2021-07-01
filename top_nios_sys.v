@@ -1,39 +1,59 @@
 module top_nios_sys (
 	RST_N,
 	CLK,
-	LED0
+	LED0, LED1, LED2, LED3,
+	HEX0A, HEX0B, HEX0C, HEX0D, HEX0E, HEX0F, HEX0G, HEX0DP,
+	SEG7_CS0, SEG7_CS1, SEG7_CS2, SEG7_CS3,
+	PUSH0, PUSH1, PUSH2, PUSH3
+
  ); 
 
-
 input		CLK, RST_N;
-output		LED0;
-reg [27:0]	counter0;
-wire counter0_clr, counter0_dec;
-wire [27:0] Decode0;
-wire [27:0] Period0;
+output		LED0, LED1, LED2, LED3;
+output		HEX0A, HEX0B, HEX0C, HEX0D, HEX0E, HEX0F, HEX0G, HEX0DP; 
+output		SEG7_CS0, SEG7_CS1, SEG7_CS2, SEG7_CS3;
+input		PUSH0, PUSH1, PUSH2, PUSH3; 
+
+reg	[25:0]		cs_cnt;
+
+assign LED2 = PUSH2;
+assign LED3 = PUSH3;
+
+assign SEG7_CS0 = (cs_cnt[18:17] == 2'b00) ? 1'b0 : 1'b1;
+assign SEG7_CS1 = (cs_cnt[18:17] == 2'b01) ? 1'b0 : 1'b1;
+assign SEG7_CS2 = (cs_cnt[18:17] == 2'b10) ? 1'b0 : 1'b1;
+assign SEG7_CS3 = (cs_cnt[18:17] == 2'b11) ? 1'b0 : 1'b1;
+
 
 always @(negedge RST_N or posedge CLK)
 begin
-	if (RST_N == 1'b0) begin
-		counter0 <= 0;
+	if(RST_N == 1'b0)begin
+		cs_cnt <= 0;
 	end else begin
-		if(counter0_clr == 1'b1) begin
-			counter0 <= 0;
+		if(cs_cnt == 26'h3FFFFFF)begin
+			cs_cnt <= 0;
 		end else begin
-			counter0 <= counter0 + 1;
+			cs_cnt <= cs_cnt + 1'b1;
 		end
 	end
+
 end
 
-assign counter0_clr = (counter0 >= Period0-1) ? 1'b1 : 1'b0;
-assign counter0_dec = (counter0 < Decode0) ? 1'b1 : 1'b0;
-assign LED0 = counter0_dec;
 
-    nios2e u0 (
-        .clk_clk                            (CLK),  
-        .reset_reset_n                      (RST_N),  
-        .period0_external_connection_export (Period0), 
-        .decode0_external_connection_export (Decode0)  
+    PwmCtrl u0 (
+        .RST_N                  (RST_N),  
+        .CLK                    (CLK),  
+        .LED0 			(LED0), 
+        .HEX0A 			(HEX0A),  
+        .HEX0B 			(HEX0B),  
+        .HEX0C 			(HEX0C),  
+        .HEX0D 			(HEX0D),  
+        .HEX0E 			(HEX0E),  
+        .HEX0F 			(HEX0F),  
+        .HEX0G 			(HEX0G),  
+        .HEX0DP 		(HEX0DP),  
+        .PUSH0 			(PUSH0),  
+        .PUSH1 			(PUSH1)  
     );
 
 

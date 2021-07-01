@@ -1,20 +1,20 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
 preplace inst nios2e.nios2_qsys_0.clock_bridge -pg 1
-preplace inst nios2e.clk_0 -pg 1 -lvl 1 -y 90
-preplace inst nios2e.DECODE0 -pg 1 -lvl 3 -y 30
+preplace inst nios2e.clk_0 -pg 1 -lvl 1 -y 130
+preplace inst nios2e.DECODE0 -pg 1 -lvl 3 -y 70
 preplace inst nios2e -pg 1 -lvl 1 -y 40 -regy -20
-preplace inst nios2e.PERIOD0 -pg 1 -lvl 3 -y 210
+preplace inst nios2e.PERIOD0 -pg 1 -lvl 3 -y 250
 preplace inst nios2e.nios2_qsys_0.cpu -pg 1
-preplace inst nios2e.nios2_qsys_0 -pg 1 -lvl 2 -y 50
-preplace inst nios2e.onchip_memory2_0 -pg 1 -lvl 3 -y 130
+preplace inst nios2e.nios2_qsys_0 -pg 1 -lvl 2 -y 90
+preplace inst nios2e.onchip_memory2_0 -pg 1 -lvl 3 -y 170
 preplace inst nios2e.nios2_qsys_0.reset_bridge -pg 1
-preplace netloc FAN_OUT<net_container>nios2e</net_container>(SLAVE)PERIOD0.clk,(SLAVE)DECODE0.clk,(MASTER)clk_0.clk,(SLAVE)nios2_qsys_0.clk,(SLAVE)onchip_memory2_0.clk1) 1 1 2 410 210 830
-preplace netloc INTERCONNECT<net_container>nios2e</net_container>(SLAVE)onchip_memory2_0.s1,(SLAVE)DECODE0.s1,(MASTER)nios2_qsys_0.data_master,(SLAVE)PERIOD0.s1,(MASTER)nios2_qsys_0.instruction_master,(SLAVE)nios2_qsys_0.debug_mem_slave) 1 1 2 430 280 810
-preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)nios2e.period0_external_connection,(SLAVE)PERIOD0.external_connection) 1 0 3 NJ 240 NJ 240 NJ
-preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)nios2e.reset) 1 0 1 NJ
-preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)DECODE0.external_connection,(SLAVE)nios2e.decode0_external_connection) 1 0 3 NJ 190 NJ 190 NJ
-preplace netloc INTERCONNECT<net_container>nios2e</net_container>(SLAVE)onchip_memory2_0.reset1,(SLAVE)DECODE0.reset,(SLAVE)PERIOD0.reset,(SLAVE)nios2_qsys_0.reset,(MASTER)nios2_qsys_0.debug_reset_request,(MASTER)clk_0.clk_reset) 1 1 2 390 260 850
+preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)PERIOD0.external_connection,(SLAVE)nios2e.period0_external_connection) 1 0 3 NJ 280 NJ 280 NJ
+preplace netloc INTERCONNECT<net_container>nios2e</net_container>(MASTER)nios2_qsys_0.instruction_master,(SLAVE)PERIOD0.s1,(SLAVE)DECODE0.s1,(SLAVE)nios2_qsys_0.debug_mem_slave,(MASTER)nios2_qsys_0.data_master,(SLAVE)onchip_memory2_0.s1) 1 1 2 430 300 810
+preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)nios2e.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)DECODE0.external_connection,(SLAVE)nios2e.decode0_external_connection) 1 0 3 NJ 230 NJ 230 NJ
 preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)nios2e.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>nios2e</net_container>(SLAVE)DECODE0.clk,(MASTER)clk_0.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)PERIOD0.clk,(SLAVE)nios2_qsys_0.clk) 1 1 2 390 30 850
+preplace netloc INTERCONNECT<net_container>nios2e</net_container>(MASTER)clk_0.clk_reset,(MASTER)nios2_qsys_0.debug_reset_request,(SLAVE)PERIOD0.reset,(SLAVE)onchip_memory2_0.reset1,(SLAVE)nios2_qsys_0.reset,(SLAVE)DECODE0.reset) 1 1 2 410 50 830
 levelinfo -pg 1 0 180 1060
 levelinfo -hier nios2e 190 220 550 900 1050
