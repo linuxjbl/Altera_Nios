@@ -27,9 +27,9 @@
 
 // ------------------------------------------
 // Generation parameters:
-//   output_name:         nios2e_mm_interconnect_0_rsp_demux_002
-//   ST_DATA_W:           95
-//   ST_CHANNEL_W:        6
+//   output_name:         nios2e_mm_interconnect_0_rsp_demux_001
+//   ST_DATA_W:           97
+//   ST_CHANNEL_W:        12
 //   NUM_OUTPUTS:         1
 //   VALID_WIDTH:         1
 // ------------------------------------------
@@ -40,14 +40,14 @@
 // 15610 - Warning: Design contains x input pin(s) that do not drive logic
 //------------------------------------------
 
-module nios2e_mm_interconnect_0_rsp_demux_002
+module nios2e_mm_interconnect_0_rsp_demux_001
 (
     // -------------------
     // Sink
     // -------------------
     input  [1-1      : 0]   sink_valid,
-    input  [95-1    : 0]   sink_data, // ST_DATA_W=95
-    input  [6-1 : 0]   sink_channel, // ST_CHANNEL_W=6
+    input  [97-1    : 0]   sink_data, // ST_DATA_W=97
+    input  [12-1 : 0]   sink_channel, // ST_CHANNEL_W=12
     input                         sink_startofpacket,
     input                         sink_endofpacket,
     output                        sink_ready,
@@ -56,8 +56,8 @@ module nios2e_mm_interconnect_0_rsp_demux_002
     // Sources 
     // -------------------
     output reg                      src0_valid,
-    output reg [95-1    : 0] src0_data, // ST_DATA_W=95
-    output reg [6-1 : 0] src0_channel, // ST_CHANNEL_W=6
+    output reg [97-1    : 0] src0_data, // ST_DATA_W=97
+    output reg [12-1 : 0] src0_channel, // ST_CHANNEL_W=12
     output reg                      src0_startofpacket,
     output reg                      src0_endofpacket,
     input                           src0_ready,
@@ -94,7 +94,7 @@ module nios2e_mm_interconnect_0_rsp_demux_002
     // -------------------
     assign ready_vector[0] = src0_ready;
 
-    assign sink_ready = |(sink_channel & {{5{1'b0}},{ready_vector[NUM_OUTPUTS - 1 : 0]}});
+    assign sink_ready = |(sink_channel & {{11{1'b0}},{ready_vector[NUM_OUTPUTS - 1 : 0]}});
 
 endmodule
 

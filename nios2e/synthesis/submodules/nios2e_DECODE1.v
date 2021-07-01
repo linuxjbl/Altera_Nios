@@ -18,7 +18,7 @@
 // altera message_level Level1 
 // altera message_off 10034 10035 10036 10037 10230 10240 10030 
 
-module nios2e_DECODE0 (
+module nios2e_DECODE1 (
                         // inputs:
                          address,
                          chipselect,

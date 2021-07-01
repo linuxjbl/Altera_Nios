@@ -5,9 +5,9 @@
   <columns>
    <connections preferredWidth="143" />
    <irq preferredWidth="47" />
+   <name preferredWidth="222" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Project,Library,Library/Processors and Peripherals,Library/Processors and Peripherals/Peripherals" />
+ <library expandedCategories="Library,Project" />
  <window width="1920" height="1030" x="0" y="0" />
 </preferences>

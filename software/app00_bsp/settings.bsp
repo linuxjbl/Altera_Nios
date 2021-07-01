@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>2021. 7. 1 오전 9:11:06</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1625098266368</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>2021. 7. 2 오전 12:26:05</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1625153165097</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\JBL\Altera_Nios\software\app00_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\nios2e.sopcinfo</SopcDesignFile>
@@ -881,14 +881,50 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>PERIOD0</slaveDescriptor>
-                <addressRange>0x00020000 - 0x0002000F</addressRange>
+                <slaveDescriptor>PERIOD1</slaveDescriptor>
+                <addressRange>0x00031000 - 0x0003100F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>DECODE0</slaveDescriptor>
-                <addressRange>0x00021000 - 0x0002100F</addressRange>
+                <slaveDescriptor>PERIOD2</slaveDescriptor>
+                <addressRange>0x00032000 - 0x0003200F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>PERIOD3</slaveDescriptor>
+                <addressRange>0x00033000 - 0x0003300F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>PERIOD4</slaveDescriptor>
+                <addressRange>0x00034000 - 0x0003400F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>DECODE1</slaveDescriptor>
+                <addressRange>0x00035000 - 0x0003500F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>DECODE2</slaveDescriptor>
+                <addressRange>0x00036000 - 0x0003600F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>DECODE3</slaveDescriptor>
+                <addressRange>0x00037000 - 0x0003700F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>DECODE4</slaveDescriptor>
+                <addressRange>0x00038000 - 0x0003800F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>

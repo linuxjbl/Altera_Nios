@@ -8,6 +8,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "LED1",
+					"strict" : false
+				},
+				{
 					"name" : "LED2",
 					"strict" : false
 				},
@@ -61,14 +65,6 @@
 				},
 				{
 					"name" : "SEG7_CS3",
-					"strict" : false
-				},
-				{
-					"name" : "PUSH2",
-					"strict" : false
-				},
-				{
-					"name" : "PUSH3",
 					"strict" : false
 				},
 				{

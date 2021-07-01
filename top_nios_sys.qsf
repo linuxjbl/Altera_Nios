@@ -78,9 +78,10 @@ set_location_assignment PIN_91 -to PUSH3
 
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+
+
+set_global_assignment -name VERILOG_FILE PwmSub.v
 set_global_assignment -name VERILOG_FILE PwmCtrl.v
 set_global_assignment -name VERILOG_FILE top_nios_sys.v
 set_global_assignment -name QSYS_FILE nios2e.qsys
-
-
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
