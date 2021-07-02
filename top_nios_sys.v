@@ -15,13 +15,29 @@ output		SEG7_CS0, SEG7_CS1, SEG7_CS2, SEG7_CS3;
 input		PUSH0, PUSH1, PUSH2, PUSH3; 
 
 reg	[25:0]		cs_cnt;
+wire	[7:0]		w_HEX;
+wire	[7:0]		w_HEX0;
+wire	[7:0]		w_HEX1;
+wire	[7:0]		w_HEX2;
+wire	[7:0]		w_HEX3;
 
+assign HEX0A = w_HEX[0];
+assign HEX0B = w_HEX[1];
+assign HEX0C = w_HEX[2];
+assign HEX0D = w_HEX[3];
+assign HEX0E = w_HEX[4];
+assign HEX0F = w_HEX[5];
+assign HEX0G = w_HEX[6];
+assign HEX0DP = w_HEX[7];
 
-assign SEG7_CS0 = (cs_cnt[18:17] == 2'b00) ? 1'b0 : 1'b1;
-assign SEG7_CS1 = (cs_cnt[18:17] == 2'b01) ? 1'b0 : 1'b1;
-assign SEG7_CS2 = (cs_cnt[18:17] == 2'b10) ? 1'b0 : 1'b1;
-assign SEG7_CS3 = (cs_cnt[18:17] == 2'b11) ? 1'b0 : 1'b1;
+assign SEG7_CS0 = (cs_cnt[18:15] == 4'b0001) ? 1'b0 : 1'b1;
+assign SEG7_CS1 = (cs_cnt[18:15] == 4'b0101) ? 1'b0 : 1'b1;
+assign SEG7_CS2 = (cs_cnt[18:15] == 4'b1001) ? 1'b0 : 1'b1;
+assign SEG7_CS3 = (cs_cnt[18:15] == 4'b1101) ? 1'b0 : 1'b1;
 
+assign w_HEX = (cs_cnt[18:17] == 2'b00) ? w_HEX0 :
+               (cs_cnt[18:17] == 2'b01) ? w_HEX1 :
+               (cs_cnt[18:17] == 2'b10) ? w_HEX2 : w_HEX3 ;
 
 always @(negedge RST_N or posedge CLK)
 begin
@@ -37,6 +53,10 @@ begin
 
 end
 
+//assign w_HEX1 = 8'hf9;
+//assign w_HEX2 = 8'ha4;
+//assign w_HEX3 = 8'hb0;
+
 
     PwmCtrl u0 (
         .RST_N                  (RST_N),  
@@ -45,14 +65,38 @@ end
         .LED1 			(LED1), 
         .LED2 			(LED2), 
         .LED3 			(LED3), 
-        .HEX0A 			(HEX0A),  
-        .HEX0B 			(HEX0B),  
-        .HEX0C 			(HEX0C),  
-        .HEX0D 			(HEX0D),  
-        .HEX0E 			(HEX0E),  
-        .HEX0F 			(HEX0F),  
-        .HEX0G 			(HEX0G),  
-        .HEX0DP 		(HEX0DP),  
+        .HEX0A 			(w_HEX0[0]),  
+        .HEX0B 			(w_HEX0[1]),  
+        .HEX0C 			(w_HEX0[2]),  
+        .HEX0D 			(w_HEX0[3]),  
+        .HEX0E 			(w_HEX0[4]),  
+        .HEX0F 			(w_HEX0[5]),  
+        .HEX0G 			(w_HEX0[6]),  
+        .HEX0DP 		(w_HEX0[7]),  
+        .HEX1A 			(w_HEX1[0]),  
+        .HEX1B 			(w_HEX1[1]),  
+        .HEX1C 			(w_HEX1[2]),  
+        .HEX1D 			(w_HEX1[3]),  
+        .HEX1E 			(w_HEX1[4]),  
+        .HEX1F 			(w_HEX1[5]),  
+        .HEX1G 			(w_HEX1[6]),  
+        .HEX1DP 		(w_HEX1[7]),  
+        .HEX2A 			(w_HEX2[0]),  
+        .HEX2B 			(w_HEX2[1]),  
+        .HEX2C 			(w_HEX2[2]),  
+        .HEX2D 			(w_HEX2[3]),  
+        .HEX2E 			(w_HEX2[4]),  
+        .HEX2F 			(w_HEX2[5]),  
+        .HEX2G 			(w_HEX2[6]),  
+        .HEX2DP 		(w_HEX2[7]),  
+        .HEX3A 			(w_HEX3[0]),  
+        .HEX3B 			(w_HEX3[1]),  
+        .HEX3C 			(w_HEX3[2]),  
+        .HEX3D 			(w_HEX3[3]),  
+        .HEX3E 			(w_HEX3[4]),  
+        .HEX3F 			(w_HEX3[5]),  
+        .HEX3G 			(w_HEX3[6]),  
+        .HEX3DP 		(w_HEX3[7]),  
         .PUSH0 			(PUSH0),  
         .PUSH1 			(PUSH1)  
     );

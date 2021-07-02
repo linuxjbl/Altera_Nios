@@ -1,0 +1,81 @@
+module top_nios_sys (
+	RST_N,
+	CLK,
+	LED0, LED1, LED2, LED3,
+	HEX0A, HEX0B, HEX0C, HEX0D, HEX0E, HEX0F, HEX0G, HEX0DP,
+	SEG7_CS0, SEG7_CS1, SEG7_CS2, SEG7_CS3,
+	PUSH0, PUSH1, PUSH2, PUSH3
+
+ ); 
+
+input		CLK, RST_N;
+output		LED0, LED1, LED2, LED3;
+output		HEX0A, HEX0B, HEX0C, HEX0D, HEX0E, HEX0F, HEX0G, HEX0DP; 
+output		SEG7_CS0, SEG7_CS1, SEG7_CS2, SEG7_CS3;
+input		PUSH0, PUSH1, PUSH2, PUSH3; 
+
+reg	[25:0]		cs_cnt;
+wire	[7:0]		w_HEX;
+wire	[7:0]		w_HEX0;
+wire	[7:0]		w_HEX1;
+wire	[7:0]		w_HEX2;
+wire	[7:0]		w_HEX3;
+
+assign HEX0A = w_HEX[0];
+assign HEX0A = w_HEX[1];
+assign HEX0A = w_HEX[2];
+assign HEX0A = w_HEX[3];
+assign HEX0A = w_HEX[4];
+assign HEX0A = w_HEX[5];
+assign HEX0A = w_HEX[6];
+assign HEX0DP = w_HEX[7];
+
+assign SEG7_CS0 = (cs_cnt[20:17] == 4'b0100) ? 1'b0 : 1'b1;
+assign SEG7_CS1 = (cs_cnt[20:17] == 4'b0101) ? 1'b0 : 1'b1;
+assign SEG7_CS2 = (cs_cnt[20:17] == 4'b0110) ? 1'b0 : 1'b1;
+assign SEG7_CS3 = (cs_cnt[20:17] == 4'b0111) ? 1'b0 : 1'b1;
+
+assign w_HEX = (cs_cnt[22:21] == 2'b00) ? w_HEX0 :
+               (cs_cnt[22:21] == 2'b01) ? w_HEX1 :
+               (cs_cnt[22:21] == 2'b10) ? w_HEX2 : w_HEX3 ;
+
+always @(negedge RST_N or posedge CLK)
+begin
+	if(RST_N == 1'b0)begin
+		cs_cnt <= 0;
+	end else begin
+		if(cs_cnt == 26'h3FFFFFF)begin
+			cs_cnt <= 0;
+		end else begin
+			cs_cnt <= cs_cnt + 1'b1;
+		end
+	end
+
+end
+
+assign w_HEX1 = 8'hf9;
+assign w_HEX2 = 8'ha4;
+assign w_HEX3 = 8'hb0;
+
+
+    PwmCtrl u0 (
+        .RST_N                  (RST_N),  
+        .CLK                    (CLK),  
+        .LED0 			(LED0), 
+        .LED1 			(LED1), 
+        .LED2 			(LED2), 
+        .LED3 			(LED3), 
+        .HEX0A 			(w_HEX0[0]),  
+        .HEX0B 			(w_HEX0[1]),  
+        .HEX0C 			(w_HEX0[2]),  
+        .HEX0D 			(w_HEX0[3]),  
+        .HEX0E 			(w_HEX0[4]),  
+        .HEX0F 			(w_HEX0[5]),  
+        .HEX0G 			(w_HEX0[6]),  
+        .HEX0DP 		(w_HEX0[7]),  
+        .PUSH0 			(PUSH0),  
+        .PUSH1 			(PUSH1)  
+    );
+
+
+endmodule

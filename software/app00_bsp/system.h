@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_qsys_0' in SOPC Builder design 'nios2e'
  * SOPC Builder design path: ../../nios2e.sopcinfo
  *
- * Generated: Fri Jul 02 00:03:05 KST 2021
+ * Generated: Sat Jul 03 05:01:36 KST 2021
  */
 
 /*
@@ -271,6 +271,87 @@
 #define HEX0_RESET_VALUE 0
 #define HEX0_SPAN 16
 #define HEX0_TYPE "altera_avalon_pio"
+
+
+/*
+ * HEX1 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_HEX1 altera_avalon_pio
+#define HEX1_BASE 0x41000
+#define HEX1_BIT_CLEARING_EDGE_REGISTER 0
+#define HEX1_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HEX1_CAPTURE 0
+#define HEX1_DATA_WIDTH 8
+#define HEX1_DO_TEST_BENCH_WIRING 0
+#define HEX1_DRIVEN_SIM_VALUE 0
+#define HEX1_EDGE_TYPE "NONE"
+#define HEX1_FREQ 50000000
+#define HEX1_HAS_IN 0
+#define HEX1_HAS_OUT 1
+#define HEX1_HAS_TRI 0
+#define HEX1_IRQ -1
+#define HEX1_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define HEX1_IRQ_TYPE "NONE"
+#define HEX1_NAME "/dev/HEX1"
+#define HEX1_RESET_VALUE 0
+#define HEX1_SPAN 16
+#define HEX1_TYPE "altera_avalon_pio"
+
+
+/*
+ * HEX2 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_HEX2 altera_avalon_pio
+#define HEX2_BASE 0x42000
+#define HEX2_BIT_CLEARING_EDGE_REGISTER 0
+#define HEX2_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HEX2_CAPTURE 0
+#define HEX2_DATA_WIDTH 8
+#define HEX2_DO_TEST_BENCH_WIRING 0
+#define HEX2_DRIVEN_SIM_VALUE 0
+#define HEX2_EDGE_TYPE "NONE"
+#define HEX2_FREQ 50000000
+#define HEX2_HAS_IN 0
+#define HEX2_HAS_OUT 1
+#define HEX2_HAS_TRI 0
+#define HEX2_IRQ -1
+#define HEX2_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define HEX2_IRQ_TYPE "NONE"
+#define HEX2_NAME "/dev/HEX2"
+#define HEX2_RESET_VALUE 0
+#define HEX2_SPAN 16
+#define HEX2_TYPE "altera_avalon_pio"
+
+
+/*
+ * HEX3 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_HEX3 altera_avalon_pio
+#define HEX3_BASE 0x43000
+#define HEX3_BIT_CLEARING_EDGE_REGISTER 0
+#define HEX3_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HEX3_CAPTURE 0
+#define HEX3_DATA_WIDTH 8
+#define HEX3_DO_TEST_BENCH_WIRING 0
+#define HEX3_DRIVEN_SIM_VALUE 0
+#define HEX3_EDGE_TYPE "NONE"
+#define HEX3_FREQ 50000000
+#define HEX3_HAS_IN 0
+#define HEX3_HAS_OUT 1
+#define HEX3_HAS_TRI 0
+#define HEX3_IRQ -1
+#define HEX3_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define HEX3_IRQ_TYPE "NONE"
+#define HEX3_NAME "/dev/HEX3"
+#define HEX3_RESET_VALUE 0
+#define HEX3_SPAN 16
+#define HEX3_TYPE "altera_avalon_pio"
 
 
 /*

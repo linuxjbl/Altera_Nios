@@ -12,6 +12,12 @@ Progress: Adding DECODE4 [altera_avalon_pio 18.1]
 Progress: Parameterizing module DECODE4
 Progress: Adding HEX0 [altera_avalon_pio 18.1]
 Progress: Parameterizing module HEX0
+Progress: Adding HEX1 [altera_avalon_pio 18.1]
+Progress: Parameterizing module HEX1
+Progress: Adding HEX2 [altera_avalon_pio 18.1]
+Progress: Parameterizing module HEX2
+Progress: Adding HEX3 [altera_avalon_pio 18.1]
+Progress: Parameterizing module HEX3
 Progress: Adding PERIOD1 [altera_avalon_pio 18.1]
 Progress: Parameterizing module PERIOD1
 Progress: Adding PERIOD2 [altera_avalon_pio 18.1]
@@ -50,6 +56,12 @@ Progress: Adding DECODE4 [altera_avalon_pio 18.1]
 Progress: Parameterizing module DECODE4
 Progress: Adding HEX0 [altera_avalon_pio 18.1]
 Progress: Parameterizing module HEX0
+Progress: Adding HEX1 [altera_avalon_pio 18.1]
+Progress: Parameterizing module HEX1
+Progress: Adding HEX2 [altera_avalon_pio 18.1]
+Progress: Parameterizing module HEX2
+Progress: Adding HEX3 [altera_avalon_pio 18.1]
+Progress: Parameterizing module HEX3
 Progress: Adding PERIOD1 [altera_avalon_pio 18.1]
 Progress: Parameterizing module PERIOD1
 Progress: Adding PERIOD2 [altera_avalon_pio 18.1]
@@ -73,20 +85,20 @@ Progress: Done reading input file
 Info: nios2e.PUSH: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: nios2e: Generating nios2e "nios2e" for QUARTUS_SYNTH
 Info: DECODE1: Starting RTL generation for module 'nios2e_DECODE1'
-Info: DECODE1:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios2e_DECODE1 --dir=C:/Users/jblee/AppData/Local/Temp/alt8809_3337477382213301558.dir/0002_DECODE1_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/jblee/AppData/Local/Temp/alt8809_3337477382213301558.dir/0002_DECODE1_gen//nios2e_DECODE1_component_configuration.pl  --do_build_sim=0  ]
+Info: DECODE1:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios2e_DECODE1 --dir=C:/Users/jblee/AppData/Local/Temp/alt8810_9060335467878152637.dir/0002_DECODE1_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/jblee/AppData/Local/Temp/alt8810_9060335467878152637.dir/0002_DECODE1_gen//nios2e_DECODE1_component_configuration.pl  --do_build_sim=0  ]
 Info: DECODE1: Done RTL generation for module 'nios2e_DECODE1'
 Info: DECODE1: "nios2e" instantiated altera_avalon_pio "DECODE1"
 Info: HEX0: Starting RTL generation for module 'nios2e_HEX0'
-Info: HEX0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios2e_HEX0 --dir=C:/Users/jblee/AppData/Local/Temp/alt8809_3337477382213301558.dir/0003_HEX0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/jblee/AppData/Local/Temp/alt8809_3337477382213301558.dir/0003_HEX0_gen//nios2e_HEX0_component_configuration.pl  --do_build_sim=0  ]
+Info: HEX0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios2e_HEX0 --dir=C:/Users/jblee/AppData/Local/Temp/alt8810_9060335467878152637.dir/0003_HEX0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/jblee/AppData/Local/Temp/alt8810_9060335467878152637.dir/0003_HEX0_gen//nios2e_HEX0_component_configuration.pl  --do_build_sim=0  ]
 Info: HEX0: Done RTL generation for module 'nios2e_HEX0'
 Info: HEX0: "nios2e" instantiated altera_avalon_pio "HEX0"
 Info: PUSH: Starting RTL generation for module 'nios2e_PUSH'
-Info: PUSH:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios2e_PUSH --dir=C:/Users/jblee/AppData/Local/Temp/alt8809_3337477382213301558.dir/0004_PUSH_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/jblee/AppData/Local/Temp/alt8809_3337477382213301558.dir/0004_PUSH_gen//nios2e_PUSH_component_configuration.pl  --do_build_sim=0  ]
+Info: PUSH:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios2e_PUSH --dir=C:/Users/jblee/AppData/Local/Temp/alt8810_9060335467878152637.dir/0004_PUSH_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/jblee/AppData/Local/Temp/alt8810_9060335467878152637.dir/0004_PUSH_gen//nios2e_PUSH_component_configuration.pl  --do_build_sim=0  ]
 Info: PUSH: Done RTL generation for module 'nios2e_PUSH'
 Info: PUSH: "nios2e" instantiated altera_avalon_pio "PUSH"
 Info: nios2_qsys_0: "nios2e" instantiated altera_nios2_gen2 "nios2_qsys_0"
 Info: onchip_memory2_0: Starting RTL generation for module 'nios2e_onchip_memory2_0'
-Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=nios2e_onchip_memory2_0 --dir=C:/Users/jblee/AppData/Local/Temp/alt8809_3337477382213301558.dir/0005_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/jblee/AppData/Local/Temp/alt8809_3337477382213301558.dir/0005_onchip_memory2_0_gen//nios2e_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=nios2e_onchip_memory2_0 --dir=C:/Users/jblee/AppData/Local/Temp/alt8810_9060335467878152637.dir/0005_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/jblee/AppData/Local/Temp/alt8810_9060335467878152637.dir/0005_onchip_memory2_0_gen//nios2e_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
 Info: onchip_memory2_0: Done RTL generation for module 'nios2e_onchip_memory2_0'
 Info: onchip_memory2_0: "nios2e" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -101,20 +113,23 @@ Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_011: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_012: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_013: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_014: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "nios2e" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: irq_mapper: "nios2e" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "nios2e" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'nios2e_nios2_qsys_0_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=nios2e_nios2_qsys_0_cpu --dir=C:/Users/jblee/AppData/Local/Temp/alt8809_3337477382213301558.dir/0008_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/jblee/AppData/Local/Temp/alt8809_3337477382213301558.dir/0008_cpu_gen//nios2e_nios2_qsys_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2021.07.01 23:58:50 (*) Starting Nios II generation
-Info: cpu: # 2021.07.01 23:58:50 (*)   Checking for plaintext license.
-Info: cpu: # 2021.07.01 23:58:51 (*)   Plaintext license not found.
-Info: cpu: # 2021.07.01 23:58:51 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2021.07.01 23:58:51 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2021.07.01 23:58:51 (*)   Creating all objects for CPU
-Info: cpu: # 2021.07.01 23:58:53 (*)   Generating RTL from CPU objects
-Info: cpu: # 2021.07.01 23:58:53 (*)   Creating plain-text RTL
-Info: cpu: # 2021.07.01 23:58:54 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=nios2e_nios2_qsys_0_cpu --dir=C:/Users/jblee/AppData/Local/Temp/alt8810_9060335467878152637.dir/0008_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/jblee/AppData/Local/Temp/alt8810_9060335467878152637.dir/0008_cpu_gen//nios2e_nios2_qsys_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2021.07.03 04:45:40 (*) Starting Nios II generation
+Info: cpu: # 2021.07.03 04:45:40 (*)   Checking for plaintext license.
+Info: cpu: # 2021.07.03 04:45:41 (*)   Plaintext license not found.
+Info: cpu: # 2021.07.03 04:45:41 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2021.07.03 04:45:41 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2021.07.03 04:45:41 (*)   Creating all objects for CPU
+Info: cpu: # 2021.07.03 04:45:42 (*)   Generating RTL from CPU objects
+Info: cpu: # 2021.07.03 04:45:42 (*)   Creating plain-text RTL
+Info: cpu: # 2021.07.03 04:45:43 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'nios2e_nios2_qsys_0_cpu'
 Info: cpu: "nios2_qsys_0" instantiated altera_nios2_gen2_unit "cpu"
 Info: nios2_qsys_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_qsys_0_data_master_translator"

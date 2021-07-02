@@ -6,6 +6,9 @@
 			decode3_external_connection_export : out std_logic_vector(27 downto 0);                    -- export
 			decode4_external_connection_export : out std_logic_vector(27 downto 0);                    -- export
 			hex0_external_connection_export    : out std_logic_vector(7 downto 0);                     -- export
+			hex1_external_connection_export    : out std_logic_vector(7 downto 0);                     -- export
+			hex2_external_connection_export    : out std_logic_vector(7 downto 0);                     -- export
+			hex3_external_connection_export    : out std_logic_vector(7 downto 0);                     -- export
 			period1_external_connection_export : out std_logic_vector(27 downto 0);                    -- export
 			period2_external_connection_export : out std_logic_vector(27 downto 0);                    -- export
 			period3_external_connection_export : out std_logic_vector(27 downto 0);                    -- export

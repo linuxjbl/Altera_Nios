@@ -1,5 +1,8 @@
 module PwmCtrl (
 	HEX0A, HEX0B, HEX0C, HEX0D, HEX0E, HEX0F, HEX0G, HEX0DP,
+	HEX1A, HEX1B, HEX1C, HEX1D, HEX1E, HEX1F, HEX1G, HEX1DP,
+	HEX2A, HEX2B, HEX2C, HEX2D, HEX2E, HEX2F, HEX2G, HEX2DP,
+	HEX3A, HEX3B, HEX3C, HEX3D, HEX3E, HEX3F, HEX3G, HEX3DP,
 	PUSH0, PUSH1,
 	LED0, LED1, LED2, LED3,
 	CLK,
@@ -8,6 +11,9 @@ module PwmCtrl (
 
 //======= PORT DEFINITION ================================================
 output		HEX0A, HEX0B, HEX0C, HEX0D, HEX0E, HEX0F, HEX0G, HEX0DP; 
+output		HEX1A, HEX1B, HEX1C, HEX1D, HEX1E, HEX1F, HEX1G, HEX1DP; 
+output		HEX2A, HEX2B, HEX2C, HEX2D, HEX2E, HEX2F, HEX2G, HEX2DP; 
+output		HEX3A, HEX3B, HEX3C, HEX3D, HEX3E, HEX3F, HEX3G, HEX3DP; 
 input		PUSH0, PUSH1; 
 output		LED0, LED1, LED2, LED3;
 input		CLK, RST_N;
@@ -61,7 +67,10 @@ endgenerate
         .decode4_external_connection_export (Decode3),
         .period4_external_connection_export (Period3),
         .push_external_connection_export ({PUSH1, PUSH0}),
-        .hex0_external_connection_export   ({HEX0DP, HEX0G, HEX0F, HEX0E, HEX0D, HEX0C, HEX0B, HEX0A})
+        .hex0_external_connection_export   ({HEX0DP, HEX0G, HEX0F, HEX0E, HEX0D, HEX0C, HEX0B, HEX0A}),
+        .hex1_external_connection_export   ({HEX1DP, HEX1G, HEX1F, HEX1E, HEX1D, HEX1C, HEX1B, HEX1A}),
+        .hex2_external_connection_export   ({HEX2DP, HEX2G, HEX2F, HEX2E, HEX2D, HEX2C, HEX2B, HEX2A}),
+        .hex3_external_connection_export   ({HEX3DP, HEX3G, HEX3F, HEX3E, HEX3D, HEX3C, HEX3B, HEX3A})
     );
 
 endmodule

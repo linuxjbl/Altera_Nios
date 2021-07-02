@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>2021. 7. 2 오전 12:26:05</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1625153165097</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>2021. 7. 3 오전 6:30:50</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1625261450936</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\JBL\Altera_Nios\software\app00_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\nios2e.sopcinfo</SopcDesignFile>
@@ -931,6 +931,24 @@
         <MemoryMap>
                 <slaveDescriptor>HEX0</slaveDescriptor>
                 <addressRange>0x00040000 - 0x0004000F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>HEX1</slaveDescriptor>
+                <addressRange>0x00041000 - 0x0004100F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>HEX2</slaveDescriptor>
+                <addressRange>0x00042000 - 0x0004200F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>HEX3</slaveDescriptor>
+                <addressRange>0x00043000 - 0x0004300F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
