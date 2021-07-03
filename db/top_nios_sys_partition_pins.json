@@ -72,6 +72,18 @@
 					"strict" : false
 				},
 				{
+					"name" : "DCLK",
+					"strict" : false
+				},
+				{
+					"name" : "SCE",
+					"strict" : false
+				},
+				{
+					"name" : "SDO",
+					"strict" : false
+				},
+				{
 					"name" : "CLK",
 					"strict" : false
 				},
@@ -93,6 +105,10 @@
 				},
 				{
 					"name" : "PUSH0",
+					"strict" : false
+				},
+				{
+					"name" : "DATA",
 					"strict" : false
 				},
 				{

@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_qsys_0' in SOPC Builder design 'nios2e'
  * SOPC Builder design path: ../../nios2e.sopcinfo
  *
- * Generated: Sat Jul 03 12:23:35 KST 2021
+ * Generated: Sat Jul 03 20:58:10 KST 2021
  */
 
 /*
@@ -87,10 +87,10 @@
 #define ALT_CPU_ICACHE_LINE_SIZE 0
 #define ALT_CPU_ICACHE_LINE_SIZE_LOG2 0
 #define ALT_CPU_ICACHE_SIZE 0
-#define ALT_CPU_INST_ADDR_WIDTH 0x11
+#define ALT_CPU_INST_ADDR_WIDTH 0x13
 #define ALT_CPU_NAME "nios2_qsys_0"
 #define ALT_CPU_OCI_VERSION 1
-#define ALT_CPU_RESET_ADDR 0x00010000
+#define ALT_CPU_RESET_ADDR 0x00070000
 
 
 /*
@@ -123,9 +123,9 @@
 #define NIOS2_ICACHE_LINE_SIZE 0
 #define NIOS2_ICACHE_LINE_SIZE_LOG2 0
 #define NIOS2_ICACHE_SIZE 0
-#define NIOS2_INST_ADDR_WIDTH 0x11
+#define NIOS2_INST_ADDR_WIDTH 0x13
 #define NIOS2_OCI_VERSION 1
-#define NIOS2_RESET_ADDR 0x00010000
+#define NIOS2_RESET_ADDR 0x00070000
 
 
 /*
@@ -241,6 +241,7 @@
  *
  */
 
+#define __ALTERA_AVALON_EPCS_FLASH_CONTROLLER
 #define __ALTERA_AVALON_ONCHIP_MEMORY2
 #define __ALTERA_AVALON_PIO
 #define __ALTERA_AVALON_UART
@@ -524,6 +525,21 @@
 #define ALT_STDOUT_PRESENT
 #define ALT_STDOUT_TYPE "altera_avalon_uart"
 #define ALT_SYSTEM_NAME "nios2e"
+
+
+/*
+ * epcs_flash_controller_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_epcs_flash_controller_0 altera_avalon_epcs_flash_controller
+#define EPCS_FLASH_CONTROLLER_0_BASE 0x70000
+#define EPCS_FLASH_CONTROLLER_0_IRQ 1
+#define EPCS_FLASH_CONTROLLER_0_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define EPCS_FLASH_CONTROLLER_0_NAME "/dev/epcs_flash_controller_0"
+#define EPCS_FLASH_CONTROLLER_0_REGISTER_OFFSET 1024
+#define EPCS_FLASH_CONTROLLER_0_SPAN 2048
+#define EPCS_FLASH_CONTROLLER_0_TYPE "altera_avalon_epcs_flash_controller"
 
 
 /*

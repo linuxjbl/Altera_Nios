@@ -7,8 +7,8 @@ module PwmCtrl (
 	LED0, LED1, LED2, LED3,
 	CLK,
 	RST_N,
-	UART_RXD,
-	UART_TXD,
+	UART_RXD, UART_TXD,
+	DCLK, SCE, SDO, DATA
  ); 
 
 //======= PORT DEFINITION ================================================
@@ -21,6 +21,8 @@ output		LED0, LED1, LED2, LED3;
 input		CLK, RST_N;
 input		UART_RXD;
 output		UART_TXD;
+output 		DCLK, SCE, SDO;
+input  		DATA;
 
 wire	[28*4-1:0]	tDecode;
 wire	[28*4-1:0]	tPeriod;
@@ -81,7 +83,11 @@ endgenerate
         .hex2_external_connection_export   ({HEX2DP, HEX2G, HEX2F, HEX2E, HEX2D, HEX2C, HEX2B, HEX2A}),
         .hex3_external_connection_export   ({HEX3DP, HEX3G, HEX3F, HEX3E, HEX3D, HEX3C, HEX3B, HEX3A}),
 	.uart_0_external_connection_rxd    (UART_RXD),     //  uart_0_external_connection.rxd
-	.uart_0_external_connection_txd    (UART_TXD)      //                            .txd
+	.uart_0_external_connection_txd    (UART_TXD),      //                            .txd
+	.epcs_flash_controller_0_external_dclk  (DCLK),  // epcs_flash_controller_0_external.dclk
+	.epcs_flash_controller_0_external_sce   (SCE),   //                                 .sce
+	.epcs_flash_controller_0_external_sdo   (SDO),   //                                 .sdo
+	.epcs_flash_controller_0_external_data0 (DATA)  //                                 .data0
 
     );
 

@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>2021. 7. 3 오후 1:57:25</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1625288245976</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>2021. 7. 3 오후 8:58:09</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1625313489428</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\JBL\Altera_Nios\software\app01_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\nios2e.sopcinfo</SopcDesignFile>
@@ -987,6 +987,12 @@
                 <addressRange>0x00060000 - 0x0006001F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>printable</attributes>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>epcs_flash_controller_0</slaveDescriptor>
+                <addressRange>0x00070000 - 0x000707FF</addressRange>
+                <addressSpan>2048</addressSpan>
+                <attributes>flash, memory, non-volatile</attributes>
         </MemoryMap>
         <LinkerSection>
                 <sectionName>.text</sectionName>

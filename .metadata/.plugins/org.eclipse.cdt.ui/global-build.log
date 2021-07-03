@@ -1,45 +1,44 @@
-14:10:33 **** Incremental Build of configuration Nios II for project app01 ****
+21:46:13 **** Build of configuration Nios II for project app02 ****
 make all 
-Info: Building ../app01_bsp/
-C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../app01_bsp/
+Info: Building ../app02_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../app02_bsp/
 [BSP build complete]
 Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
-nios2-elf-gcc -xc -MP -MMD -c -I../app01_bsp//HAL/inc -I../app01_bsp/ -I../app01_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+nios2-elf-gcc -xc -MP -MMD -c -I../app02_bsp//HAL/inc -I../app02_bsp/ -I../app02_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
 hello_world_small.c: In function '_wait':
 hello_world_small.c:27:15: warning: variable 'sum' set but not used [-Wunused-but-set-variable]
   volatile int sum, data;
                ^
-hello_world_small.c: In function 'uart_rx_char2':
-hello_world_small.c:266:11: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
-    tmpstr = onechar;
-           ^
 hello_world_small.c: In function 'main':
-hello_world_small.c:317:16: warning: 'reg1' may be used uninitialized in this function [-Wmaybe-uninitialized]
+hello_world_small.c:299:16: warning: 'reg1' may be used uninitialized in this function [-Wmaybe-uninitialized]
        if((reg1 & 0x0F) == 0x01) {
                 ^
-Info: Linking app01.elf
-nios2-elf-g++  -T'../app01_bsp//linker.x' -msys-crt0='../app01_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../app01_bsp/  -msmallc  -Wl,-Map=app01.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o app01.elf obj/default/hello_world_small.o -lm -msys-lib=m
-nios2-elf-insert app01.elf --thread_model hal --cpu_name nios2_qsys_0 --qsys true --simulation_enabled false --stderr_dev uart_0 --stdin_dev uart_0 --stdout_dev uart_0 --sopc_system_name nios2e --quartus_project_dir "C:/JBL/Altera_Nios" --jdi ../..//output_files/top_nios_sys.jdi --sopcinfo C:/JBL/Altera_Nios/software/app01_bsp/../../nios2e.sopcinfo
+Info: Linking app02.elf
+nios2-elf-g++  -T'../app02_bsp//linker.x' -msys-crt0='../app02_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../app02_bsp/  -msmallc  -Wl,-Map=app02.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o app02.elf obj/default/hello_world_small.o -lm -msys-lib=m
+nios2-elf-insert app02.elf --thread_model hal --cpu_name nios2_qsys_0 --qsys true --simulation_enabled false --stderr_dev uart_0 --stdin_dev uart_0 --stdout_dev uart_0 --sopc_system_name nios2e --quartus_project_dir "C:/JBL/Altera_Nios" --jdi ../..//output_files/top_nios_sys.jdi --sopcinfo C:/JBL/Altera_Nios/software/app02_bsp/../../nios2e.sopcinfo
 perl: warning: Setting locale failed.
 perl: warning: Please check that your locale settings:
 	LC_ALL = (unset),
 	LANG = "KO"
     are supported and installed on your system.
 perl: warning: Falling back to the standard locale ("C").
-Info: (app01.elf) 7524 Bytes program size (code + initialized data).
-Info:             8744 Bytes free for stack + heap.
-Info: Creating app01.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source app01.elf >app01.objdump
-[app01 build complete]
-14:10:47 **** Build of configuration Nios II for project app01 ****
+Info: (app02.elf) 7156 Bytes program size (code + initialized data).
+Info:             9196 Bytes free for stack + heap.
+Info: Creating app02.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source app02.elf >app02.objdump
+[app02 build complete]
+
+21:46:16 Build Finished (took 2s.915ms)
+
+21:46:33 **** Build of configuration Nios II for project app02 ****
 make all 
-Info: Building ../app01_bsp/
-C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../app01_bsp/
+Info: Building ../app02_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../app02_bsp/
 [BSP build complete]
-[app01 build complete]
-14:10:49 **** Incremental Build of configuration Nios II for project app01 ****
+[app02 build complete]
+21:46:35 **** Incremental Build of configuration Nios II for project app02 ****
 make all 
-Info: Building ../app01_bsp/
-C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../app01_bsp/
+Info: Building ../app02_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../app02_bsp/
 [BSP build complete]
-[app01 build complete]
+[app02 build complete]

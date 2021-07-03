@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2021.07.03.13:54:43</td>
+    <td class="l">2021.07.03.21:41:12</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -129,6 +129,9 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <br/>&#160;&#160;
      <a href="#module_PUSH"><b>PUSH</b>
      </a> altera_avalon_pio 18.1
+     <br/>&#160;&#160;
+     <a href="#module_epcs_flash_controller_0"><b>epcs_flash_controller_0</b>
+     </a> altera_avalon_epcs_flash_controller 18.1
      <br/>&#160;&#160;
      <a href="#module_nios2_qsys_0"><b>nios2_qsys_0</b>
      </a> altera_nios2_gen2 18.1
@@ -322,6 +325,19 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="slaveb">s1&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>00050000</td>
     <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slavemodule">&#160;
+     <a href="#module_epcs_flash_controller_0"><b>epcs_flash_controller_0</b>
+     </a>
+    </td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slaveb">epcs_control_port&#160;</td>
+    <td class="addr"><span style="color:#989898">0x</span>00070000</td>
+    <td class="addr"><span style="color:#989898">0x</span>00070000</td>
    </tr>
    <tr>
     <td class="slavemodule">&#160;
@@ -3062,6 +3078,126 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </tr>
    </table>
   </div>
+  <a name="module_epcs_flash_controller_0"> </a>
+  <div>
+   <hr/>
+   <h2>epcs_flash_controller_0</h2>altera_avalon_epcs_flash_controller v18.1
+   <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="8">
+       <a href="#module_nios2_qsys_0">nios2_qsys_0</a>
+      </td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="main" rowspan="13">epcs_flash_controller_0</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;epcs_control_port</td>
+     </tr>
+     <tr>
+      <td class="from">instruction_master&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;epcs_control_port</td>
+     </tr>
+     <tr>
+      <td class="from">irq&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;irq</td>
+     </tr>
+     <tr>
+      <td class="from">debug_reset_request&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_clk_0">clk_0</a>
+      </td>
+      <td class="from">clk&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr>
+      <td class="from">clk_reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+    </table>
+   </div>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">autoSelectASMIAtom</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">useASMIAtom</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">resetrequest_enabled</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">clockRate</td>
+        <td class="parametervalue">50000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamilyString</td>
+        <td class="parametervalue">CYCLONEIVE</td>
+       </tr>
+       <tr>
+        <td class="parametername">autoInitializationFileName</td>
+        <td class="parametervalue">nios2e_epcs_flash_controller_0</td>
+       </tr>
+       <tr>
+        <td class="parametername">register_offset</td>
+        <td class="parametervalue">1024</td>
+       </tr>
+       <tr>
+        <td class="parametername">iuseASMIAtom</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>
+      <table>
+       <tr>
+        <td class="parametername">REGISTER_OFFSET</td>
+        <td class="parametervalue">1024</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+  </div>
   <a name="module_nios2_qsys_0"> </a>
   <div>
    <hr/>
@@ -3074,7 +3210,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_clk_0">clk_0</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="82">nios2_qsys_0</td>
+      <td class="main" rowspan="91">nios2_qsys_0</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk</td>
@@ -3084,6 +3220,52 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="to">&#160;&#160;reset</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="neighbor" rowspan="8">
+       <a href="#module_epcs_flash_controller_0">epcs_flash_controller_0</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;epcs_control_port</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">instruction_master&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;epcs_control_port</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">irq&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;irq</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">debug_reset_request&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
      </tr>
      <tr>
       <td></td>
@@ -3707,7 +3889,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">resetSlave</td>
-        <td class="parametervalue">onchip_memory2_0.s1</td>
+        <td class="parametervalue">epcs_flash_controller_0.epcs_control_port</td>
        </tr>
        <tr>
         <td class="parametername">mmu_TLBMissExcSlave</td>
@@ -4067,7 +4249,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">resetAbsoluteAddr</td>
-        <td class="parametervalue">65536</td>
+        <td class="parametervalue">458752</td>
        </tr>
        <tr>
         <td class="parametername">exceptionAbsoluteAddr</td>
@@ -4131,7 +4313,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">instAddrWidth</td>
-        <td class="parametervalue">17</td>
+        <td class="parametervalue">19</td>
        </tr>
        <tr>
         <td class="parametername">faAddrWidth</td>
@@ -4183,7 +4365,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">instSlaveMapParam</td>
-        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='nios2_qsys_0.debug_mem_slave' start='0x800' end='0x1000' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='onchip_memory2_0.s1' start='0x10000' end='0x14000' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;/address-map&gt;</td>
+        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='nios2_qsys_0.debug_mem_slave' start='0x800' end='0x1000' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='onchip_memory2_0.s1' start='0x10000' end='0x14000' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;slave name='epcs_flash_controller_0.epcs_control_port' start='0x70000' end='0x70800' type='altera_avalon_epcs_flash_controller.epcs_control_port' /&gt;&lt;/address-map&gt;</td>
        </tr>
        <tr>
         <td class="parametername">faSlaveMapParam</td>
@@ -4191,7 +4373,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">dataSlaveMapParam</td>
-        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='nios2_qsys_0.debug_mem_slave' start='0x800' end='0x1000' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='onchip_memory2_0.s1' start='0x10000' end='0x14000' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;slave name='PERIOD1.s1' start='0x31000' end='0x31010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='PERIOD2.s1' start='0x32000' end='0x32010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='PERIOD3.s1' start='0x33000' end='0x33010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='PERIOD4.s1' start='0x34000' end='0x34010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='DECODE1.s1' start='0x35000' end='0x35010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='DECODE2.s1' start='0x36000' end='0x36010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='DECODE3.s1' start='0x37000' end='0x37010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='DECODE4.s1' start='0x38000' end='0x38010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='HEX0.s1' start='0x40000' end='0x40010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='HEX1.s1' start='0x41000' end='0x41010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='HEX2.s1' start='0x42000' end='0x42010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='HEX3.s1' start='0x43000' end='0x43010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='PUSH.s1' start='0x50000' end='0x50010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='uart_0.s1' start='0x60000' end='0x60020' type='altera_avalon_uart.s1' /&gt;&lt;/address-map&gt;</td>
+        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='nios2_qsys_0.debug_mem_slave' start='0x800' end='0x1000' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='onchip_memory2_0.s1' start='0x10000' end='0x14000' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;slave name='PERIOD1.s1' start='0x31000' end='0x31010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='PERIOD2.s1' start='0x32000' end='0x32010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='PERIOD3.s1' start='0x33000' end='0x33010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='PERIOD4.s1' start='0x34000' end='0x34010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='DECODE1.s1' start='0x35000' end='0x35010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='DECODE2.s1' start='0x36000' end='0x36010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='DECODE3.s1' start='0x37000' end='0x37010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='DECODE4.s1' start='0x38000' end='0x38010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='HEX0.s1' start='0x40000' end='0x40010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='HEX1.s1' start='0x41000' end='0x41010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='HEX2.s1' start='0x42000' end='0x42010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='HEX3.s1' start='0x43000' end='0x43010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='PUSH.s1' start='0x50000' end='0x50010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='uart_0.s1' start='0x60000' end='0x60020' type='altera_avalon_uart.s1' /&gt;&lt;slave name='epcs_flash_controller_0.epcs_control_port' start='0x70000' end='0x70800' type='altera_avalon_epcs_flash_controller.epcs_control_port' /&gt;&lt;/address-map&gt;</td>
        </tr>
        <tr>
         <td class="parametername">tightlyCoupledDataMaster0MapParam</td>
@@ -4243,7 +4425,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">internalIrqMaskSystemInfo</td>
-        <td class="parametervalue">1</td>
+        <td class="parametervalue">3</td>
        </tr>
        <tr>
         <td class="parametername">customInstSlavesSystemInfo</td>
@@ -4400,7 +4582,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">INST_ADDR_WIDTH</td>
-        <td class="parametervalue">17</td>
+        <td class="parametervalue">19</td>
        </tr>
        <tr>
         <td class="parametername">OCI_VERSION</td>
@@ -4408,7 +4590,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">RESET_ADDR</td>
-        <td class="parametervalue">0x00010000</td>
+        <td class="parametervalue">0x00070000</td>
        </tr>
       </table>
      </td>
@@ -4877,8 +5059,8 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </div>
   <table class="blueBar">
    <tr>
-    <td class="l">generation took 0.01 seconds</td>
-    <td class="r">rendering took 0.18 seconds</td>
+    <td class="l">generation took 0.02 seconds</td>
+    <td class="r">rendering took 0.13 seconds</td>
    </tr>
   </table>
  </body>

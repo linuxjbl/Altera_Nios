@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_qsys_0' in SOPC Builder design 'nios2e'
  * SOPC Builder design path: ../../nios2e.sopcinfo
  *
- * Generated: Sat Jul 03 07:27:40 KST 2021
+ * Generated: Sat Jul 03 20:17:08 KST 2021
  */
 
 /*
@@ -50,12 +50,15 @@
 
 MEMORY
 {
-    reset : ORIGIN = 0x10000, LENGTH = 32
+    onchip_memory2_0_BEFORE_EXCEPTION : ORIGIN = 0x10000, LENGTH = 32
     onchip_memory2_0 : ORIGIN = 0x10020, LENGTH = 16352
+    reset : ORIGIN = 0x70000, LENGTH = 32
+    epcs_flash_controller_0 : ORIGIN = 0x70020, LENGTH = 2016
 }
 
 /* Define symbols for each memory base-address */
 __alt_mem_onchip_memory2_0 = 0x10000;
+__alt_mem_epcs_flash_controller_0 = 0x70000;
 
 OUTPUT_FORMAT( "elf32-littlenios2",
                "elf32-littlenios2",
@@ -319,6 +322,23 @@ SECTIONS
     } > onchip_memory2_0
 
     PROVIDE (_alt_partition_onchip_memory2_0_load_addr = LOADADDR(.onchip_memory2_0));
+
+    /*
+     *
+     * This section's LMA is set to the .text region.
+     * crt0 will copy to this section's specified mapped region virtual memory address (VMA)
+     *
+     */
+
+    .epcs_flash_controller_0 : AT ( LOADADDR (.onchip_memory2_0) + SIZEOF (.onchip_memory2_0) )
+    {
+        PROVIDE (_alt_partition_epcs_flash_controller_0_start = ABSOLUTE(.));
+        *(.epcs_flash_controller_0 .epcs_flash_controller_0. epcs_flash_controller_0.*)
+        . = ALIGN(4);
+        PROVIDE (_alt_partition_epcs_flash_controller_0_end = ABSOLUTE(.));
+    } > epcs_flash_controller_0
+
+    PROVIDE (_alt_partition_epcs_flash_controller_0_load_addr = LOADADDR(.epcs_flash_controller_0));
 
     /*
      * Stabs debugging sections.

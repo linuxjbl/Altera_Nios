@@ -80,7 +80,7 @@ module nios2e_nios2_qsys_0_cpu_test_bench (
   input   [  3: 0] E_mem_byte_en;
   input   [ 31: 0] E_st_data;
   input            E_valid;
-  input   [ 16: 0] F_pcb;
+  input   [ 18: 0] F_pcb;
   input            F_valid;
   input            R_ctrl_break;
   input            R_ctrl_exception;
@@ -110,7 +110,7 @@ module nios2e_nios2_qsys_0_cpu_test_bench (
   input   [  3: 0] d_byteenable;
   input            d_read;
   input            d_write;
-  input   [ 16: 0] i_address;
+  input   [ 18: 0] i_address;
   input            i_read;
   input   [ 31: 0] i_readdata;
   input            i_waitrequest;

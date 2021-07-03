@@ -18,7 +18,7 @@ module nios2e_nios2_qsys_0 (
 		output wire        d_write,                             //                          .write
 		output wire [31:0] d_writedata,                         //                          .writedata
 		output wire        debug_mem_slave_debugaccess_to_roms, //                          .debugaccess
-		output wire [16:0] i_address,                           //        instruction_master.address
+		output wire [18:0] i_address,                           //        instruction_master.address
 		output wire        i_read,                              //                          .read
 		input  wire [31:0] i_readdata,                          //                          .readdata
 		input  wire        i_waitrequest,                       //                          .waitrequest
