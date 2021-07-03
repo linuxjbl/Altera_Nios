@@ -1,5 +1,10 @@
 #include "sys/alt_stdio.h"
 #include "system.h"
+#include <altera_avalon_pio_regs.h>
+#include <altera_avalon_uart.h>
+#include <altera_avalon_uart_fd.h>
+#include <altera_avalon_uart_regs.h>
+
 
 unsigned long Period[8];
 unsigned long Decode[8];
@@ -12,6 +17,9 @@ char state[3];
 int Category = 0;
 int Duty[8];
 int ChN = 0;
+
+unsigned long 	regval;
+char 		onechar;
 
 void _wait(loop_count)
 int loop_count;
@@ -224,7 +232,20 @@ int main()
 	state[0] = 'R';	state[1] = 'U';	state[2] = 'N';
 	DispAll();
 
+	regval = 0;  // UART rx buffer clear
+
 	while (1) {
+		alt_putstr("Nios UART Test by JBL ... \r\n");
+
+		regval = *(volatile unsigned long *)(UART_0_BASE+2*4);
+		if((regval & 0x0080) == 1){
+			onechar = alt_getchar();
+			if(onechar == 'p'){
+				alt_putstr("ABCDPPPP0123\r\n");
+			}
+			regval = 0;
+		}
+
     	reg1old = reg1;
       	reg1tmp = *(volatile unsigned long *)PUSH_BASE;
     	_wait(10000);

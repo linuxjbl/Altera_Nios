@@ -17,8 +17,10 @@ module nios2e (
 		output wire [27:0] period2_external_connection_export, // period2_external_connection.export
 		output wire [27:0] period3_external_connection_export, // period3_external_connection.export
 		output wire [27:0] period4_external_connection_export, // period4_external_connection.export
-		input  wire [1:0]  push_external_connection_export,    //    push_external_connection.export
-		input  wire        reset_reset_n                       //                       reset.reset_n
+		input  wire [3:0]  push_external_connection_export,    //    push_external_connection.export
+		input  wire        reset_reset_n,                      //                       reset.reset_n
+		input  wire        uart_0_external_connection_rxd,     //  uart_0_external_connection.rxd
+		output wire        uart_0_external_connection_txd      //                            .txd
 	);
 
 	wire  [31:0] nios2_qsys_0_data_master_readdata;                          // mm_interconnect_0:nios2_qsys_0_data_master_readdata -> nios2_qsys_0:d_readdata
@@ -110,8 +112,16 @@ module nios2e (
 	wire   [1:0] mm_interconnect_0_hex3_s1_address;                          // mm_interconnect_0:HEX3_s1_address -> HEX3:address
 	wire         mm_interconnect_0_hex3_s1_write;                            // mm_interconnect_0:HEX3_s1_write -> HEX3:write_n
 	wire  [31:0] mm_interconnect_0_hex3_s1_writedata;                        // mm_interconnect_0:HEX3_s1_writedata -> HEX3:writedata
+	wire         mm_interconnect_0_uart_0_s1_chipselect;                     // mm_interconnect_0:uart_0_s1_chipselect -> uart_0:chipselect
+	wire  [15:0] mm_interconnect_0_uart_0_s1_readdata;                       // uart_0:readdata -> mm_interconnect_0:uart_0_s1_readdata
+	wire   [2:0] mm_interconnect_0_uart_0_s1_address;                        // mm_interconnect_0:uart_0_s1_address -> uart_0:address
+	wire         mm_interconnect_0_uart_0_s1_read;                           // mm_interconnect_0:uart_0_s1_read -> uart_0:read_n
+	wire         mm_interconnect_0_uart_0_s1_begintransfer;                  // mm_interconnect_0:uart_0_s1_begintransfer -> uart_0:begintransfer
+	wire         mm_interconnect_0_uart_0_s1_write;                          // mm_interconnect_0:uart_0_s1_write -> uart_0:write_n
+	wire  [15:0] mm_interconnect_0_uart_0_s1_writedata;                      // mm_interconnect_0:uart_0_s1_writedata -> uart_0:writedata
+	wire         irq_mapper_receiver0_irq;                                   // uart_0:irq -> irq_mapper:receiver0_irq
 	wire  [31:0] nios2_qsys_0_irq_irq;                                       // irq_mapper:sender_irq -> nios2_qsys_0:irq
-	wire         rst_controller_reset_out_reset;                             // rst_controller:reset_out -> [DECODE1:reset_n, DECODE2:reset_n, DECODE3:reset_n, DECODE4:reset_n, HEX0:reset_n, HEX1:reset_n, HEX2:reset_n, HEX3:reset_n, PERIOD1:reset_n, PERIOD2:reset_n, PERIOD3:reset_n, PERIOD4:reset_n, PUSH:reset_n, irq_mapper:reset, mm_interconnect_0:nios2_qsys_0_reset_reset_bridge_in_reset_reset, nios2_qsys_0:reset_n, onchip_memory2_0:reset, rst_translator:in_reset]
+	wire         rst_controller_reset_out_reset;                             // rst_controller:reset_out -> [DECODE1:reset_n, DECODE2:reset_n, DECODE3:reset_n, DECODE4:reset_n, HEX0:reset_n, HEX1:reset_n, HEX2:reset_n, HEX3:reset_n, PERIOD1:reset_n, PERIOD2:reset_n, PERIOD3:reset_n, PERIOD4:reset_n, PUSH:reset_n, irq_mapper:reset, mm_interconnect_0:nios2_qsys_0_reset_reset_bridge_in_reset_reset, nios2_qsys_0:reset_n, onchip_memory2_0:reset, rst_translator:in_reset, uart_0:reset_n]
 	wire         rst_controller_reset_out_reset_req;                         // rst_controller:reset_req -> [nios2_qsys_0:reset_req, onchip_memory2_0:reset_req, rst_translator:reset_req_in]
 	wire         nios2_qsys_0_debug_reset_request_reset;                     // nios2_qsys_0:debug_reset_request -> rst_controller:reset_in1
 
@@ -298,6 +308,21 @@ module nios2e (
 		.freeze     (1'b0)                                              // (terminated)
 	);
 
+	nios2e_uart_0 uart_0 (
+		.clk           (clk_clk),                                   //                 clk.clk
+		.reset_n       (~rst_controller_reset_out_reset),           //               reset.reset_n
+		.address       (mm_interconnect_0_uart_0_s1_address),       //                  s1.address
+		.begintransfer (mm_interconnect_0_uart_0_s1_begintransfer), //                    .begintransfer
+		.chipselect    (mm_interconnect_0_uart_0_s1_chipselect),    //                    .chipselect
+		.read_n        (~mm_interconnect_0_uart_0_s1_read),         //                    .read_n
+		.write_n       (~mm_interconnect_0_uart_0_s1_write),        //                    .write_n
+		.writedata     (mm_interconnect_0_uart_0_s1_writedata),     //                    .writedata
+		.readdata      (mm_interconnect_0_uart_0_s1_readdata),      //                    .readdata
+		.rxd           (uart_0_external_connection_rxd),            // external_connection.export
+		.txd           (uart_0_external_connection_txd),            //                    .export
+		.irq           (irq_mapper_receiver0_irq)                   //                 irq.irq
+	);
+
 	nios2e_mm_interconnect_0 mm_interconnect_0 (
 		.clk_0_clk_clk                                  (clk_clk),                                                    //                                clk_0_clk.clk
 		.nios2_qsys_0_reset_reset_bridge_in_reset_reset (rst_controller_reset_out_reset),                             // nios2_qsys_0_reset_reset_bridge_in_reset.reset
@@ -389,13 +414,21 @@ module nios2e (
 		.PERIOD4_s1_writedata                           (mm_interconnect_0_period4_s1_writedata),                     //                                         .writedata
 		.PERIOD4_s1_chipselect                          (mm_interconnect_0_period4_s1_chipselect),                    //                                         .chipselect
 		.PUSH_s1_address                                (mm_interconnect_0_push_s1_address),                          //                                  PUSH_s1.address
-		.PUSH_s1_readdata                               (mm_interconnect_0_push_s1_readdata)                          //                                         .readdata
+		.PUSH_s1_readdata                               (mm_interconnect_0_push_s1_readdata),                         //                                         .readdata
+		.uart_0_s1_address                              (mm_interconnect_0_uart_0_s1_address),                        //                                uart_0_s1.address
+		.uart_0_s1_write                                (mm_interconnect_0_uart_0_s1_write),                          //                                         .write
+		.uart_0_s1_read                                 (mm_interconnect_0_uart_0_s1_read),                           //                                         .read
+		.uart_0_s1_readdata                             (mm_interconnect_0_uart_0_s1_readdata),                       //                                         .readdata
+		.uart_0_s1_writedata                            (mm_interconnect_0_uart_0_s1_writedata),                      //                                         .writedata
+		.uart_0_s1_begintransfer                        (mm_interconnect_0_uart_0_s1_begintransfer),                  //                                         .begintransfer
+		.uart_0_s1_chipselect                           (mm_interconnect_0_uart_0_s1_chipselect)                      //                                         .chipselect
 	);
 
 	nios2e_irq_mapper irq_mapper (
-		.clk        (clk_clk),                        //       clk.clk
-		.reset      (rst_controller_reset_out_reset), // clk_reset.reset
-		.sender_irq (nios2_qsys_0_irq_irq)            //    sender.irq
+		.clk           (clk_clk),                        //       clk.clk
+		.reset         (rst_controller_reset_out_reset), // clk_reset.reset
+		.receiver0_irq (irq_mapper_receiver0_irq),       // receiver0.irq
+		.sender_irq    (nios2_qsys_0_irq_irq)            //    sender.irq
 	);
 
 	altera_reset_controller #(

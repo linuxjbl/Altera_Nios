@@ -4,7 +4,8 @@ module top_nios_sys (
 	LED0, LED1, LED2, LED3,
 	HEX0A, HEX0B, HEX0C, HEX0D, HEX0E, HEX0F, HEX0G, HEX0DP,
 	SEG7_CS0, SEG7_CS1, SEG7_CS2, SEG7_CS3,
-	PUSH0, PUSH1, PUSH2, PUSH3
+	PUSH0, PUSH1, PUSH2, PUSH3,
+	UART_RXD, UART_TXD
 
  ); 
 
@@ -13,6 +14,8 @@ output		LED0, LED1, LED2, LED3;
 output		HEX0A, HEX0B, HEX0C, HEX0D, HEX0E, HEX0F, HEX0G, HEX0DP; 
 output		SEG7_CS0, SEG7_CS1, SEG7_CS2, SEG7_CS3;
 input		PUSH0, PUSH1, PUSH2, PUSH3; 
+input		UART_RXD;
+output		UART_TXD;
 
 reg	[25:0]		cs_cnt;
 wire	[7:0]		w_HEX;
@@ -97,8 +100,12 @@ end
         .HEX3F 			(w_HEX3[5]),  
         .HEX3G 			(w_HEX3[6]),  
         .HEX3DP 		(w_HEX3[7]),  
-        .PUSH0 			(PUSH0),  
-        .PUSH1 			(PUSH1)  
+        .PUSH0 			(~PUSH0),   // Active Low   
+        .PUSH1 			(~PUSH1),  
+        .PUSH2 			(~PUSH2),  
+        .PUSH3 			(~PUSH3),  
+        .UART_RXD 		(UART_RXD),  
+        .UART_TXD 		(UART_TXD)  
     );
 
 

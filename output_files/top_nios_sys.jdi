@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="3418bfc527bd40d9bf3e"/>
+    <hash md5_digest_80b="cb1be7b800cccf0aa4d0"/>
   </project>
   <file_info>
     <file device="EP4CE6E22C8" path="top_nios_sys.sof" usercode="0xFFFFFFFF"/>
@@ -85,7 +85,7 @@
   <sld_infos>
     <sld_info hpath="PwmCtrl:u0|nios2e:u0" name="u0">
       <assignment_values>
-        <assignment_value text="QSYS_NAME nios2e HAS_SOPCINFO 1 GENERATION_ID 1625261203"/>
+        <assignment_value text="QSYS_NAME nios2e HAS_SOPCINFO 1 GENERATION_ID 1625288082"/>
       </assignment_values>
       <parameters/>
     </sld_info>
