@@ -1,7 +1,9 @@
 #include "sys/alt_stdio.h"
 #include "system.h"
 #include <altera_avalon_pio_regs.h>
-
+#include <altera_avalon_uart.h>
+#include <altera_avalon_uart_fd.h>
+#include <altera_avalon_uart_regs.h>
 
 #include <stdio.h>
 #include <alt_types.h>
@@ -286,7 +288,11 @@ int main()
 	while (1) {
 		//alt_putstr("Nios UART Test by JBL ... \r\n");
 
-
+		regval = *(volatile unsigned long *)(UART_0_BASE+2*4);
+		if((regval & 0x0080) == 0x80){
+			uart_rx_char();
+			regval = 0;
+		}
 
     	reg1old = reg1;
       	reg1tmp = *(volatile unsigned long *)PUSH_BASE;
@@ -333,7 +339,7 @@ int main()
     		_wait(200000);
     	}
 
-    	if((reg1 & 0x03) == 0x01) { // button2ê±ë©—ë¬–ï¿½{ï¿½^ê¹›ê±‚ê¶•ë“ê¶ ê·¢ê¶«
+    	if((reg1 & 0x03) == 0x01) { // button2i‘I‘ğƒ{ƒ^ƒ“j‚ª‰Ÿ‚³‚ê‚½
     		if(state[1] == 'N') { // "PNx", Pwm ChN selection
     			if(state[2] == '0') {
     				state[2] = '1';
@@ -413,7 +419,7 @@ int main()
 			else pn++;
     	}
 
-    	if((reg1 & 0x03) == 0x02) { // button1ê±ë™‚ë¯¦ï¿½{ï¿½^ê¹›ê±‚ê¶•ë“ê¶ ê·¢ê¶«
+    	if((reg1 & 0x03) == 0x02) { // button1iŒˆ’èƒ{ƒ^ƒ“j‚ª‰Ÿ‚³‚ê‚½
     		if(state[1] == 'U') { // "RUN", free-run state
 				state[0] = 'P';	state[1] = 'N';
 				if(ChN == 0) state[2] = '0';
@@ -552,21 +558,21 @@ int main()
     		DispAll();
     	}
 
-    	if(state[1] == 'U') { // "RUN"ê¸šê¸¡ï¿½[ê¸£ê¶¼ë©£ë¸«ï¿½_ë±®
+    	if(state[1] == 'U') { // "RUN"ƒXƒe[ƒg‚Í‘S•”“_“”
    			DispAll();
-    	} else if(state[1] == 'N') { // "PNx"ê¸šê¸¡ï¿½[ê¸£ê¶¼1ë™¿ë½ï¿½_ë½…
+    	} else if(state[1] == 'N') { // "PNx"ƒXƒe[ƒg‚Í1ŒÂ–Ú“_–Å
         		if(blinkco < 3) {
         			TurnOffSeg(1);
         		} else {
         			DispAll();
         		}
-    	} else if(state[1] == 'C') { // "xCx"ê¸šê¸¡ï¿½[ê¸£ê¶¼2ë™¿ë½ï¿½_ë½…
+    	} else if(state[1] == 'C') { // "xCx"ƒXƒe[ƒg‚Í2ŒÂ–Ú“_–Å
     		if(blinkco < 3) {
     			TurnOffSeg(2);
     		} else {
     			DispAll();
     		}
-    	} else if(state[1] == 'F' || state[1] == 'd') { // "xFx"ê¸šê¸¡ï¿½[ê¸£ê¶¼3,4ë™¿ë½ï¿½_ë½…
+    	} else if(state[1] == 'F' || state[1] == 'd') { // "xFx"ƒXƒe[ƒg‚Í3,4ŒÂ–Ú“_–Å
     		if(blinkco < 3) {
     			TurnOffSeg(3);
     		} else {

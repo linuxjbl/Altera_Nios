@@ -286,7 +286,11 @@ int main()
 	while (1) {
 		//alt_putstr("Nios UART Test by JBL ... \r\n");
 
-
+		regval = *(volatile unsigned long *)(UART_0_BASE+2*4);
+		if((regval & 0x0080) == 0x80){
+			uart_rx_char();
+			regval = 0;
+		}
 
     	reg1old = reg1;
       	reg1tmp = *(volatile unsigned long *)PUSH_BASE;
