@@ -84,6 +84,46 @@ set_location_assignment PIN_8 -to SCE
 set_location_assignment PIN_6 -to SDO
 set_location_assignment PIN_13 -to DATA
 
+set_location_assignment PIN_76 -to SDRAM_ADDR[0]
+set_location_assignment PIN_77 -to SDRAM_ADDR[1]
+set_location_assignment PIN_80 -to SDRAM_ADDR[2]
+set_location_assignment PIN_83 -to SDRAM_ADDR[3]
+set_location_assignment PIN_68 -to SDRAM_ADDR[4]
+set_location_assignment PIN_67 -to SDRAM_ADDR[5]
+set_location_assignment PIN_66 -to SDRAM_ADDR[6]
+set_location_assignment PIN_65 -to SDRAM_ADDR[7]
+set_location_assignment PIN_64 -to SDRAM_ADDR[8]
+set_location_assignment PIN_60 -to SDRAM_ADDR[9]
+set_location_assignment PIN_75 -to SDRAM_ADDR[10]
+set_location_assignment PIN_59 -to SDRAM_ADDR[11]
+set_location_assignment PIN_73 -to SDRAM_BA[0]
+set_location_assignment PIN_74 -to SDRAM_BA[1]
+set_location_assignment PIN_70 -to SDRAM_CAS_N
+set_location_assignment PIN_58 -to SDRAM_CKE
+set_location_assignment PIN_72 -to SDRAM_CS_N
+set_location_assignment PIN_28 -to SDRAM_DQ[0]
+set_location_assignment PIN_30 -to SDRAM_DQ[1]
+set_location_assignment PIN_31 -to SDRAM_DQ[2]
+set_location_assignment PIN_32 -to SDRAM_DQ[3]
+set_location_assignment PIN_33 -to SDRAM_DQ[4]
+set_location_assignment PIN_34 -to SDRAM_DQ[5]
+set_location_assignment PIN_38 -to SDRAM_DQ[6]
+set_location_assignment PIN_39 -to SDRAM_DQ[7]
+set_location_assignment PIN_54 -to SDRAM_DQ[8]
+set_location_assignment PIN_53 -to SDRAM_DQ[9]
+set_location_assignment PIN_52 -to SDRAM_DQ[10]
+set_location_assignment PIN_51 -to SDRAM_DQ[11]
+set_location_assignment PIN_50 -to SDRAM_DQ[12]
+set_location_assignment PIN_49 -to SDRAM_DQ[13]
+set_location_assignment PIN_46 -to SDRAM_DQ[14]
+set_location_assignment PIN_44 -to SDRAM_DQ[15]
+set_location_assignment PIN_42 -to SDRAM_DQM[0]
+set_location_assignment PIN_55 -to SDRAM_DQM[1]
+set_location_assignment PIN_71 -to SDRAM_RAS_N
+set_location_assignment PIN_69 -to SDRAM_WE_N
+set_location_assignment PIN_43 -to SDRAM_CLK
+
+
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 
@@ -93,8 +133,8 @@ set_global_assignment -name VERILOG_FILE PwmCtrl.v
 set_global_assignment -name VERILOG_FILE top_nios_sys.v
 set_global_assignment -name QSYS_FILE nios2e.qsys
 
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to UART_RXD
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to UART_TXD
+#set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to UART_RXD
+#set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to UART_TXD
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0A
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0B
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0C
@@ -195,5 +235,56 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name QIP_FILE mypll.qip
+
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PUSH0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PUSH1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SCE
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_BA[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_BA[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_CAS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_CKE
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_CS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQM[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQM[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_RAS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_WE_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_CLK
+
+
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SLD_FILE db/stp1_auto_stripped.stp

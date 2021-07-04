@@ -3,45 +3,45 @@
 preplace inst nios2e.nios2_qsys_0.clock_bridge -pg 1
 preplace inst nios2e.clk_0 -pg 1 -lvl 1 -y 330
 preplace inst nios2e -pg 1 -lvl 1 -y 40 -regy -20
-preplace inst nios2e.DECODE1 -pg 1 -lvl 3 -y 610
-preplace inst nios2e.PUSH -pg 1 -lvl 3 -y 810
+preplace inst nios2e.DECODE1 -pg 1 -lvl 3 -y 630
+preplace inst nios2e.PUSH -pg 1 -lvl 3 -y 830
 preplace inst nios2e.DECODE2 -pg 1 -lvl 3 -y 130
-preplace inst nios2e.uart_0 -pg 1 -lvl 3 -y 1530
-preplace inst nios2e.PERIOD1 -pg 1 -lvl 3 -y 910
+preplace inst nios2e.PERIOD1 -pg 1 -lvl 3 -y 930
 preplace inst nios2e.DECODE3 -pg 1 -lvl 3 -y 230
-preplace inst nios2e.PERIOD2 -pg 1 -lvl 3 -y 1130
-preplace inst nios2e.DECODE4 -pg 1 -lvl 3 -y 710
+preplace inst nios2e.PERIOD2 -pg 1 -lvl 3 -y 1150
+preplace inst nios2e.DECODE4 -pg 1 -lvl 3 -y 730
 preplace inst nios2e.nios2_qsys_0.cpu -pg 1
 preplace inst nios2e.nios2_qsys_0 -pg 1 -lvl 2 -y 420
-preplace inst nios2e.PERIOD3 -pg 1 -lvl 3 -y 1230
-preplace inst nios2e.PERIOD4 -pg 1 -lvl 3 -y 1330
-preplace inst nios2e.HEX0 -pg 1 -lvl 3 -y 1430
-preplace inst nios2e.onchip_memory2_0 -pg 1 -lvl 3 -y 530
-preplace inst nios2e.epcs_flash_controller_0 -pg 1 -lvl 3 -y 1010
+preplace inst nios2e.jtag_uart_0 -pg 1 -lvl 3 -y 1550
+preplace inst nios2e.PERIOD3 -pg 1 -lvl 3 -y 1250
+preplace inst nios2e.new_sdram_controller_0 -pg 1 -lvl 3 -y 330
+preplace inst nios2e.PERIOD4 -pg 1 -lvl 3 -y 1350
+preplace inst nios2e.HEX0 -pg 1 -lvl 3 -y 1450
+preplace inst nios2e.epcs_flash_controller_0 -pg 1 -lvl 3 -y 1030
 preplace inst nios2e.HEX1 -pg 1 -lvl 3 -y 30
-preplace inst nios2e.HEX2 -pg 1 -lvl 3 -y 330
-preplace inst nios2e.HEX3 -pg 1 -lvl 3 -y 430
+preplace inst nios2e.HEX2 -pg 1 -lvl 3 -y 430
+preplace inst nios2e.HEX3 -pg 1 -lvl 3 -y 530
 preplace inst nios2e.nios2_qsys_0.reset_bridge -pg 1
-preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)nios2e.uart_0_external_connection,(SLAVE)uart_0.external_connection) 1 0 3 NJ 1560 NJ 1560 NJ
-preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)PERIOD3.external_connection,(SLAVE)nios2e.period3_external_connection) 1 0 3 NJ 1260 NJ 1260 NJ
-preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)PERIOD2.external_connection,(SLAVE)nios2e.period2_external_connection) 1 0 3 NJ 1160 NJ 1160 NJ
-preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)nios2e.hex2_external_connection,(SLAVE)HEX2.external_connection) 1 0 3 NJ 320 NJ 320 NJ
-preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)nios2e.decode3_external_connection,(SLAVE)DECODE3.external_connection) 1 0 3 NJ 260 NJ 260 NJ
-preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)PERIOD1.external_connection,(SLAVE)nios2e.period1_external_connection) 1 0 3 NJ 940 NJ 940 NJ
-preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)nios2e.decode1_external_connection,(SLAVE)DECODE1.external_connection) 1 0 3 NJ 640 NJ 640 NJ
-preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)nios2e.push_external_connection,(SLAVE)PUSH.external_connection) 1 0 3 NJ 840 NJ 840 NJ
+preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)nios2e.hex3_external_connection,(SLAVE)HEX3.external_connection) 1 0 3 NJ 320 NJ 340 NJ
+preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)PERIOD2.external_connection,(SLAVE)nios2e.period2_external_connection) 1 0 3 NJ 1180 NJ 1180 NJ
+preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)nios2e.hex2_external_connection,(SLAVE)HEX2.external_connection) 1 0 3 NJ 260 NJ 280 NJ
+preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)DECODE3.external_connection,(SLAVE)nios2e.decode3_external_connection) 1 0 3 NJ 240 NJ 260 NJ
+preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)nios2e.decode1_external_connection,(SLAVE)DECODE1.external_connection) 1 0 3 NJ 660 NJ 660 NJ
+preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)nios2e.period1_external_connection,(SLAVE)PERIOD1.external_connection) 1 0 3 NJ 960 NJ 960 NJ
 preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)nios2e.hex1_external_connection,(SLAVE)HEX1.external_connection) 1 0 3 NJ 60 NJ 60 NJ
-preplace netloc FAN_OUT<net_container>nios2e</net_container>(SLAVE)uart_0.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)DECODE2.clk,(SLAVE)HEX2.clk,(SLAVE)PERIOD3.clk,(SLAVE)PERIOD4.clk,(SLAVE)PERIOD1.clk,(SLAVE)epcs_flash_controller_0.clk,(MASTER)clk_0.clk,(SLAVE)PUSH.clk,(SLAVE)DECODE1.clk,(SLAVE)HEX0.clk,(SLAVE)DECODE3.clk,(SLAVE)HEX1.clk,(SLAVE)HEX3.clk,(SLAVE)nios2_qsys_0.clk,(SLAVE)PERIOD2.clk,(SLAVE)DECODE4.clk) 1 1 2 430 340 950
-preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)DECODE2.external_connection,(SLAVE)nios2e.decode2_external_connection) 1 0 3 NJ 160 NJ 160 NJ
-preplace netloc FAN_OUT<net_container>nios2e</net_container>(SLAVE)uart_0.irq,(MASTER)nios2_qsys_0.irq,(SLAVE)epcs_flash_controller_0.irq) 1 2 1 850
-preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)HEX0.external_connection,(SLAVE)nios2e.hex0_external_connection) 1 0 3 NJ 1460 NJ 1460 NJ
-preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)epcs_flash_controller_0.external,(SLAVE)nios2e.epcs_flash_controller_0_external) 1 0 3 NJ 1060 NJ 1060 NJ
-preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)nios2e.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
-preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)nios2e.decode4_external_connection,(SLAVE)DECODE4.external_connection) 1 0 3 NJ 740 NJ 740 NJ
-preplace netloc INTERCONNECT<net_container>nios2e</net_container>(SLAVE)DECODE1.s1,(SLAVE)HEX0.s1,(SLAVE)uart_0.s1,(SLAVE)PUSH.s1,(SLAVE)PERIOD1.s1,(SLAVE)onchip_memory2_0.s1,(MASTER)nios2_qsys_0.data_master,(SLAVE)HEX3.s1,(SLAVE)PERIOD2.s1,(SLAVE)nios2_qsys_0.debug_mem_slave,(MASTER)nios2_qsys_0.instruction_master,(SLAVE)HEX2.s1,(SLAVE)epcs_flash_controller_0.epcs_control_port,(SLAVE)DECODE4.s1,(SLAVE)HEX1.s1,(SLAVE)PERIOD4.s1,(SLAVE)PERIOD3.s1,(SLAVE)DECODE2.s1,(SLAVE)DECODE3.s1) 1 1 2 450 360 910
+preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)nios2e.decode2_external_connection,(SLAVE)DECODE2.external_connection) 1 0 3 NJ 160 NJ 160 NJ
+preplace netloc FAN_OUT<net_container>nios2e</net_container>(SLAVE)DECODE3.clk,(SLAVE)nios2_qsys_0.clk,(SLAVE)PERIOD2.clk,(SLAVE)epcs_flash_controller_0.clk,(SLAVE)PERIOD1.clk,(SLAVE)PUSH.clk,(SLAVE)DECODE2.clk,(SLAVE)DECODE4.clk,(SLAVE)DECODE1.clk,(SLAVE)PERIOD4.clk,(SLAVE)new_sdram_controller_0.clk,(MASTER)clk_0.clk,(SLAVE)HEX3.clk,(SLAVE)HEX2.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)PERIOD3.clk,(SLAVE)HEX0.clk,(SLAVE)HEX1.clk) 1 1 2 430 360 890
+preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)nios2e.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)HEX0.external_connection,(SLAVE)nios2e.hex0_external_connection) 1 0 3 NJ 1480 NJ 1480 NJ
+preplace netloc INTERCONNECT<net_container>nios2e</net_container>(MASTER)clk_0.clk_reset,(SLAVE)PERIOD4.reset,(SLAVE)DECODE3.reset,(SLAVE)PUSH.reset,(SLAVE)HEX1.reset,(SLAVE)DECODE1.reset,(SLAVE)DECODE2.reset,(SLAVE)jtag_uart_0.reset,(SLAVE)HEX0.reset,(SLAVE)epcs_flash_controller_0.reset,(SLAVE)PERIOD1.reset,(SLAVE)nios2_qsys_0.reset,(SLAVE)PERIOD3.reset,(SLAVE)HEX3.reset,(SLAVE)DECODE4.reset,(SLAVE)HEX2.reset,(SLAVE)new_sdram_controller_0.reset,(MASTER)nios2_qsys_0.debug_reset_request,(SLAVE)PERIOD2.reset) 1 1 2 410 380 930
+preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)PUSH.external_connection,(SLAVE)nios2e.push_external_connection) 1 0 3 NJ 860 NJ 860 NJ
+preplace netloc FAN_OUT<net_container>nios2e</net_container>(SLAVE)jtag_uart_0.irq,(SLAVE)epcs_flash_controller_0.irq,(MASTER)nios2_qsys_0.irq) 1 2 1 850
+preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)new_sdram_controller_0.wire,(SLAVE)nios2e.new_sdram_controller_0_wire) 1 0 3 NJ 280 NJ 300 NJ
+preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)nios2e.epcs_flash_controller_0_external,(SLAVE)epcs_flash_controller_0.external) 1 0 3 NJ 1080 NJ 1080 NJ
+preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)DECODE4.external_connection,(SLAVE)nios2e.decode4_external_connection) 1 0 3 NJ 760 NJ 760 NJ
 preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)nios2e.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
-preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)PERIOD4.external_connection,(SLAVE)nios2e.period4_external_connection) 1 0 3 NJ 1360 NJ 1360 NJ
-preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)HEX3.external_connection,(SLAVE)nios2e.hex3_external_connection) 1 0 3 NJ 300 NJ 300 NJ
-preplace netloc INTERCONNECT<net_container>nios2e</net_container>(SLAVE)DECODE3.reset,(SLAVE)PERIOD4.reset,(SLAVE)HEX3.reset,(SLAVE)DECODE1.reset,(SLAVE)epcs_flash_controller_0.reset,(SLAVE)uart_0.reset,(MASTER)nios2_qsys_0.debug_reset_request,(SLAVE)DECODE2.reset,(SLAVE)HEX2.reset,(SLAVE)nios2_qsys_0.reset,(SLAVE)PUSH.reset,(SLAVE)onchip_memory2_0.reset1,(SLAVE)PERIOD2.reset,(SLAVE)DECODE4.reset,(SLAVE)PERIOD1.reset,(SLAVE)HEX0.reset,(SLAVE)HEX1.reset,(SLAVE)PERIOD3.reset,(MASTER)clk_0.clk_reset) 1 1 2 410 380 870
-levelinfo -pg 1 0 200 1190
-levelinfo -hier nios2e 210 240 610 1020 1180
+preplace netloc INTERCONNECT<net_container>nios2e</net_container>(MASTER)nios2_qsys_0.data_master,(SLAVE)DECODE4.s1,(SLAVE)HEX2.s1,(MASTER)nios2_qsys_0.instruction_master,(SLAVE)epcs_flash_controller_0.epcs_control_port,(SLAVE)HEX0.s1,(SLAVE)DECODE2.s1,(SLAVE)HEX3.s1,(SLAVE)nios2_qsys_0.debug_mem_slave,(SLAVE)HEX1.s1,(SLAVE)PERIOD2.s1,(SLAVE)PERIOD1.s1,(SLAVE)DECODE3.s1,(SLAVE)new_sdram_controller_0.s1,(SLAVE)PERIOD3.s1,(SLAVE)PERIOD4.s1,(SLAVE)PUSH.s1,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)DECODE1.s1) 1 1 2 450 560 970
+preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)PERIOD4.external_connection,(SLAVE)nios2e.period4_external_connection) 1 0 3 NJ 1380 NJ 1380 NJ
+preplace netloc EXPORT<net_container>nios2e</net_container>(SLAVE)nios2e.period3_external_connection,(SLAVE)PERIOD3.external_connection) 1 0 3 NJ 1280 NJ 1280 NJ
+levelinfo -pg 1 0 200 1210
+levelinfo -hier nios2e 210 240 610 1040 1200

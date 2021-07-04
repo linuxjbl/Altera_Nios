@@ -5,8 +5,10 @@ module top_nios_sys (
 	HEX0A, HEX0B, HEX0C, HEX0D, HEX0E, HEX0F, HEX0G, HEX0DP,
 	SEG7_CS0, SEG7_CS1, SEG7_CS2, SEG7_CS3,
 	PUSH0, PUSH1, PUSH2, PUSH3,
-	UART_RXD, UART_TXD,
-	DCLK, SCE, SDO, DATA
+	//UART_RXD, UART_TXD,
+	DCLK, SCE, SDO, DATA,
+	SDRAM_ADDR, SDRAM_BA, SDRAM_CAS_N, SDRAM_CKE, SDRAM_CS_N,
+	SDRAM_DQ, SDRAM_DQM, SDRAM_RAS_N, SDRAM_WE_N, SDRAM_CLK
  ); 
 
 input		CLK, RST_N;
@@ -14,10 +16,21 @@ output		LED0, LED1, LED2, LED3;
 output		HEX0A, HEX0B, HEX0C, HEX0D, HEX0E, HEX0F, HEX0G, HEX0DP; 
 output		SEG7_CS0, SEG7_CS1, SEG7_CS2, SEG7_CS3;
 input		PUSH0, PUSH1, PUSH2, PUSH3; 
-input		UART_RXD;
-output		UART_TXD;
+//input		UART_RXD;
+//output		UART_TXD;
 output 		DCLK, SCE, SDO;
 input  		DATA;
+output	[11:0]	SDRAM_ADDR;
+output	[1:0]	SDRAM_BA;
+output		SDRAM_CAS_N;
+output		SDRAM_CKE;
+output		SDRAM_CS_N;
+inout	[15:0]	SDRAM_DQ;
+output	[1:0]	SDRAM_DQM;
+output		SDRAM_RAS_N;
+output		SDRAM_WE_N;
+output		SDRAM_CLK;
+
 
 
 reg	[25:0]		cs_cnt;
@@ -107,12 +120,22 @@ end
         .PUSH1 			(~PUSH1),  
         .PUSH2 			(~PUSH2),  
         .PUSH3 			(~PUSH3),  
-        .UART_RXD 		(UART_RXD),  
-        .UART_TXD 		(UART_TXD), 
+        //.UART_RXD 		(UART_RXD),  
+        //.UART_TXD 		(UART_TXD), 
         .DCLK	 		(DCLK), 
         .SCE	 		(SCE), 
         .SDO	 		(SDO), 
         .DATA	 		(DATA), 
+	.SDRAM_ADDR		(SDRAM_ADDR), 
+	.SDRAM_BA		(SDRAM_BA), 
+	.SDRAM_CAS_N		(SDRAM_CAS_N), 
+	.SDRAM_CKE		(SDRAM_CKE), 
+	.SDRAM_CS_N		(SDRAM_CS_N),
+	.SDRAM_DQ		(SDRAM_DQ), 
+	.SDRAM_DQM		(SDRAM_DQM), 
+	.SDRAM_RAS_N		(SDRAM_RAS_N), 
+	.SDRAM_WE_N		(SDRAM_WE_N), 
+	.SDRAM_CLK		(SDRAM_CLK)
     );
 
 

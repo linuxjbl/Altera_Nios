@@ -1,4 +1,4 @@
 eclipse.preferences.version=1
-newSoftwareExampleWizardPage.defaultLocation=C\:\\JBL\\Altera_Nios\\software\\app02
+newSoftwareExampleWizardPage.defaultLocation=C\:\\JBL\\Altera_Nios\\software\\mtest02
 newSoftwareExampleWizardPage.sopcinfoFile=C\:\\JBL\\Altera_Nios\\nios2e.sopcinfo
-newSoftwareExampleWizardPage2.newBspLocation=C\:\\JBL\\Altera_Nios\\software\\app02_bsp
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\JBL\\Altera_Nios\\software\\mtest02_bsp
